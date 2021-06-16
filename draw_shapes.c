@@ -15,13 +15,11 @@ void print_square(int leftCol, int size)
 }
 
 // Prints an arrow.
-void print_arrow(int leftCol, int size)
+void print_arrow(int size)
 {
-  for (int row = 0; row <= size; row++) {
-    int minCol = leftCol + size - row, maxCol = leftCol + size + row;
-    int col;
-    for (col = 0; col < minCol; col) putchar(' ');
-    for (       ; col <= maxCol; col) putchar('#');
+  for (int row = 0; row < size; row++) {
+    for (int col = 0; col < row; col++) putchar(' ');
+    for (int k = 0; k < row; k++) putchar('*');
     putchar('\n');
   }
 }
