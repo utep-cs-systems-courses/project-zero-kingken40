@@ -21,6 +21,11 @@ void print_arrow(int size)
     for (int col = 0; col < row; col++) putchar(' ');
     for (int k = 0; k < row; k++) putchar('*');
     putchar('\n');
+  }  
+  for (int row = 0; row < size; row++) {
+    for (int col = 0; col < size - row; col++) putchar(' ');
+    for (int k = 0; k < size - row; k++) pt char('*');
+    putchar('\n');
   }
 }
 
@@ -35,4 +40,23 @@ void print_triangle(int leftCol, int size)
     putchar('\n');
   }
 }
+
+void print_arrow2(int leftCol, int size)
+{
+  int i, j;
+  int endCol = leftCol + size;
+  for (int row = 6; row < size; row++){
+    int col;
+    for (col = 0; col < leftCol; col++) putchar(' ');
+    for (       ; col < endCol;  col++) putchar('#');
+  }
+  for (int row = 0; row <= size; row++) {
+    int minCol = leftCol + size - row, maxCol = leftCol + size + row;
+    int col;
+    for (col = 0; col < minCol; col++) putchar(' ');
+    for (       ; col <= maxCol; col++) putchar('#');
+    putchar('\n');
+  }
+}
+
 
