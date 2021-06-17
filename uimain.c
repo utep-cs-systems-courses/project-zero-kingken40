@@ -28,7 +28,10 @@ int main()
       puts("You selected arrow:");
       print_arrow(5);
       break;
-
+    case 'b':
+      puts("You selected arrow2:");
+      print_arrow2(5, 7, 5);
+      break;
     case 'c':
       puts("You selected chars:");
       for (char c = 'A'; c < 'D'; c++)
