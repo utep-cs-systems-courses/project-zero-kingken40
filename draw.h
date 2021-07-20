@@ -2,6 +2,8 @@
 #define DRAW_INCLUDED
 
 void print_triangle(int startCol, int size);
+void print_arrow(int size);
+void print_arrow2(int startCol, int tsize, int size);
 void print_square(int startCol, int size);
 void print_char_11x16(char c);
 
